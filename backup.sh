@@ -10,8 +10,8 @@ fi
 
 
 docker run --rm \
-  --env-file /opt/shvirtd-example-python/.env \
+  --entrypoint "" \
   --network shvirtd-example-python_backend \
+  --env-file ~/.cred \
   schnitzler/mysqldump \
-  sh -c 'exec mysqldump --host="db" --user="${MYSQL_USER}" --password="${MYSQL_PASSWORD}" --databases "${MYSQL_DATABASE}"' > "${BACKUP_FILENAME}"
-
+  sh -c 'exec mysqldump --default-auth=mysql_native_password --host="db" --user="${MYSQL_USER}" --password="${MYSQL_PASSWORD}" --databases "${MYSQL_DATABASE}"' > "${BACKUP_FILENAME}"
