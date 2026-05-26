@@ -11,7 +11,7 @@ fi
 
 docker run --rm \
   --env-file /opt/shvirtd-example-python/.env \
-  --network backend \
+  --network shvirtd-example-python_backend \
   -e MYSQL_USER="${DB_USER}" \
   -e MYSQL_PASSWORD="${DB_PASSWORD}" \
   -e MYSQL_DATABASE="${DB_NAME}" \
