@@ -6,7 +6,6 @@ BACKUP_FILENAME="${BACKUP_DIR}/backup_${TIMESTAMP}.sql"
 
 if [ ! -d "$BACKUP_DIR" ]; then
     sudo mkdir -p "$BACKUP_DIR"
-    chown nick "$BACKUP_DIR"
 fi
 
 
